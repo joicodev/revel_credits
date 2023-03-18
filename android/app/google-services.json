@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "541708131708",
+    "project_id": "revel-credits",
+    "storage_bucket": "revel-credits.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:541708131708:android:5784bbf8b12b52151858f9",
+        "android_client_info": {
+          "package_name": "com.example.revel_credits"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "541708131708-sql91t5grfblitqk4r1co9608bl1p841.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0v9Ds89jpYhtp3jUqi5hlJTb2onmMxBc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "541708131708-sql91t5grfblitqk4r1co9608bl1p841.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "541708131708-aidpg42crkm1h5236j0v4d140l8avrvr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.revelCredits"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
