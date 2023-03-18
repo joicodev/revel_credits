@@ -1,0 +1,13 @@
+ {
+    "onboardingFirst": "Mantén un registro detallado de tus vehículos disponibles para la venta.",
+    "onboardingSecond": "Registra fácilmente las ventas de tus vehículos financiados.",
+    "onboardingThird": "Haz seguimiento a los estatus de los pagos de tus clientes.",
+    "onboardingFourth": "Analiza el rendimiento de tu negocio en cualquier momento y en cualquier lugar.",
+    "onboardingFirstTitle": "Vehículos disponibles.",
+    "onboardingSecondTitle": "Registro de ventas.",
+    "onboardingThirdTitle": "Estatus de pagos.",
+    "onboardingFourthTitle": "Rendimiento y análisis.",
+    "letsGoRightAway": "¡Vamos ahora mismo!",
+    "skip": "Saltar",
+    "done": "Hecho"
+ }

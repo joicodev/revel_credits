@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'vehicle_model.dart';
+part of 'vehicle_entity.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_VehicleModel _$$_VehicleModelFromJson(Map<String, dynamic> json) =>
-    _$_VehicleModel(
+_$_VehicleEntity _$$_VehicleEntityFromJson(Map<String, dynamic> json) =>
+    _$_VehicleEntity(
       year: json['year'] as int,
       brand: json['brand'] as String,
       model: json['model'] as String,
@@ -20,7 +20,7 @@ _$_VehicleModel _$$_VehicleModelFromJson(Map<String, dynamic> json) =>
       extraExpenses: (json['extra_expenses'] as num).toDouble(),
     );
 
-Map<String, dynamic> _$$_VehicleModelToJson(_$_VehicleModel instance) =>
+Map<String, dynamic> _$$_VehicleEntityToJson(_$_VehicleEntity instance) =>
     <String, dynamic>{
       'year': instance.year,
       'brand': instance.brand,

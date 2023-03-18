@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'vehicle_model.dart';
+part of 'vehicle_entity.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-VehicleModel _$VehicleModelFromJson(Map<String, dynamic> json) {
-  return _VehicleModel.fromJson(json);
+VehicleEntity _$VehicleEntityFromJson(Map<String, dynamic> json) {
+  return _VehicleEntity.fromJson(json);
 }
 
 /// @nodoc
-mixin _$VehicleModel {
+mixin _$VehicleEntity {
   int get year => throw _privateConstructorUsedError;
   String get brand => throw _privateConstructorUsedError;
   String get model => throw _privateConstructorUsedError;
@@ -36,15 +36,15 @@ mixin _$VehicleModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $VehicleModelCopyWith<VehicleModel> get copyWith =>
+  $VehicleEntityCopyWith<VehicleEntity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $VehicleModelCopyWith<$Res> {
-  factory $VehicleModelCopyWith(
-          VehicleModel value, $Res Function(VehicleModel) then) =
-      _$VehicleModelCopyWithImpl<$Res, VehicleModel>;
+abstract class $VehicleEntityCopyWith<$Res> {
+  factory $VehicleEntityCopyWith(
+          VehicleEntity value, $Res Function(VehicleEntity) then) =
+      _$VehicleEntityCopyWithImpl<$Res, VehicleEntity>;
   @useResult
   $Res call(
       {int year,
@@ -59,9 +59,9 @@ abstract class $VehicleModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$VehicleModelCopyWithImpl<$Res, $Val extends VehicleModel>
-    implements $VehicleModelCopyWith<$Res> {
-  _$VehicleModelCopyWithImpl(this._value, this._then);
+class _$VehicleEntityCopyWithImpl<$Res, $Val extends VehicleEntity>
+    implements $VehicleEntityCopyWith<$Res> {
+  _$VehicleEntityCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -123,11 +123,11 @@ class _$VehicleModelCopyWithImpl<$Res, $Val extends VehicleModel>
 }
 
 /// @nodoc
-abstract class _$$_VehicleModelCopyWith<$Res>
-    implements $VehicleModelCopyWith<$Res> {
-  factory _$$_VehicleModelCopyWith(
-          _$_VehicleModel value, $Res Function(_$_VehicleModel) then) =
-      __$$_VehicleModelCopyWithImpl<$Res>;
+abstract class _$$_VehicleEntityCopyWith<$Res>
+    implements $VehicleEntityCopyWith<$Res> {
+  factory _$$_VehicleEntityCopyWith(
+          _$_VehicleEntity value, $Res Function(_$_VehicleEntity) then) =
+      __$$_VehicleEntityCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -143,11 +143,11 @@ abstract class _$$_VehicleModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_VehicleModelCopyWithImpl<$Res>
-    extends _$VehicleModelCopyWithImpl<$Res, _$_VehicleModel>
-    implements _$$_VehicleModelCopyWith<$Res> {
-  __$$_VehicleModelCopyWithImpl(
-      _$_VehicleModel _value, $Res Function(_$_VehicleModel) _then)
+class __$$_VehicleEntityCopyWithImpl<$Res>
+    extends _$VehicleEntityCopyWithImpl<$Res, _$_VehicleEntity>
+    implements _$$_VehicleEntityCopyWith<$Res> {
+  __$$_VehicleEntityCopyWithImpl(
+      _$_VehicleEntity _value, $Res Function(_$_VehicleEntity) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -163,7 +163,7 @@ class __$$_VehicleModelCopyWithImpl<$Res>
     Object? creationDate = null,
     Object? extraExpenses = null,
   }) {
-    return _then(_$_VehicleModel(
+    return _then(_$_VehicleEntity(
       year: null == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
@@ -206,8 +206,8 @@ class __$$_VehicleModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_VehicleModel extends _VehicleModel {
-  const _$_VehicleModel(
+class _$_VehicleEntity extends _VehicleEntity {
+  const _$_VehicleEntity(
       {required this.year,
       required this.brand,
       required this.model,
@@ -220,8 +220,8 @@ class _$_VehicleModel extends _VehicleModel {
       : _photos = photos,
         super._();
 
-  factory _$_VehicleModel.fromJson(Map<String, dynamic> json) =>
-      _$$_VehicleModelFromJson(json);
+  factory _$_VehicleEntity.fromJson(Map<String, dynamic> json) =>
+      _$$_VehicleEntityFromJson(json);
 
   @override
   final int year;
@@ -254,14 +254,14 @@ class _$_VehicleModel extends _VehicleModel {
 
   @override
   String toString() {
-    return 'VehicleModel(year: $year, brand: $brand, model: $model, description: $description, photos: $photos, licensePlate: $licensePlate, buyPrice: $buyPrice, creationDate: $creationDate, extraExpenses: $extraExpenses)';
+    return 'VehicleEntity(year: $year, brand: $brand, model: $model, description: $description, photos: $photos, licensePlate: $licensePlate, buyPrice: $buyPrice, creationDate: $creationDate, extraExpenses: $extraExpenses)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_VehicleModel &&
+            other is _$_VehicleEntity &&
             (identical(other.year, year) || other.year == year) &&
             (identical(other.brand, brand) || other.brand == brand) &&
             (identical(other.model, model) || other.model == model) &&
@@ -295,19 +295,19 @@ class _$_VehicleModel extends _VehicleModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_VehicleModelCopyWith<_$_VehicleModel> get copyWith =>
-      __$$_VehicleModelCopyWithImpl<_$_VehicleModel>(this, _$identity);
+  _$$_VehicleEntityCopyWith<_$_VehicleEntity> get copyWith =>
+      __$$_VehicleEntityCopyWithImpl<_$_VehicleEntity>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VehicleModelToJson(
+    return _$$_VehicleEntityToJson(
       this,
     );
   }
 }
 
-abstract class _VehicleModel extends VehicleModel {
-  const factory _VehicleModel(
+abstract class _VehicleEntity extends VehicleEntity {
+  const factory _VehicleEntity(
       {required final int year,
       required final String brand,
       required final String model,
@@ -320,11 +320,11 @@ abstract class _VehicleModel extends VehicleModel {
       @JsonKey(name: 'creation_date')
           required final DateTime creationDate,
       @JsonKey(name: 'extra_expenses')
-          required final double extraExpenses}) = _$_VehicleModel;
-  const _VehicleModel._() : super._();
+          required final double extraExpenses}) = _$_VehicleEntity;
+  const _VehicleEntity._() : super._();
 
-  factory _VehicleModel.fromJson(Map<String, dynamic> json) =
-      _$_VehicleModel.fromJson;
+  factory _VehicleEntity.fromJson(Map<String, dynamic> json) =
+      _$_VehicleEntity.fromJson;
 
   @override
   int get year;
@@ -350,6 +350,6 @@ abstract class _VehicleModel extends VehicleModel {
   double get extraExpenses;
   @override
   @JsonKey(ignore: true)
-  _$$_VehicleModelCopyWith<_$_VehicleModel> get copyWith =>
+  _$$_VehicleEntityCopyWith<_$_VehicleEntity> get copyWith =>
       throw _privateConstructorUsedError;
 }

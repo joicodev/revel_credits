@@ -1,13 +1,13 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'vehicle_model.freezed.dart';
-part 'vehicle_model.g.dart';
+part 'vehicle_entity.freezed.dart';
+part 'vehicle_entity.g.dart';
 
 @freezed
-class VehicleModel with _$VehicleModel {
-  const VehicleModel._();
+class VehicleEntity with _$VehicleEntity {
+  const VehicleEntity._();
 
-  const factory VehicleModel({
+  const factory VehicleEntity({
     required int year,
     required String brand,
     required String model,
@@ -17,11 +17,11 @@ class VehicleModel with _$VehicleModel {
     @JsonKey(name: 'buy_price') required double buyPrice,
     @JsonKey(name: 'creation_date') required DateTime creationDate,
     @JsonKey(name: 'extra_expenses') required double extraExpenses,
-  }) = _VehicleModel;
+  }) = _VehicleEntity;
 
-  // Build the VehicleModel from a RawJson
-  factory VehicleModel.fromJson(Map<String, Object?> json) =>
-      _$VehicleModelFromJson(json);
+  // Build the VehicleEntity from a RawJson
+  factory VehicleEntity.fromJson(Map<String, Object?> json) =>
+      _$VehicleEntityFromJson(json);
 
   // Define a method that returns the total cost between extra costs and the purchase price
   double get totalExpenses => buyPrice + extraExpenses;

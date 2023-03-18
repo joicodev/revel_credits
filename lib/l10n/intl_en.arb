@@ -1,0 +1,13 @@
+{
+    "onboardingFirst" : "Keep a detailed record of your vehicles available for sale.",
+    "onboardingSecond" : "Easily register sales of your financed vehicles.",
+    "onboardingThird" : "Track the payment status of your clients.",
+    "onboardingFourth" : "Analyze the performance of your business anytime, anywhere.",
+    "onboardingFirstTitle": "Available vehicles.",
+    "onboardingSecondTitle": "Sales registration.",
+    "onboardingThirdTitle":"Payment status.",
+    "onboardingFourthTitle": "Performance and analysis.",
+    "letsGoRightAway": "Let's go right away!",
+    "skip": "Skip",
+    "done": "Done"
+}
