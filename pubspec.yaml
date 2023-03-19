@@ -43,6 +43,7 @@ dependencies:
   json_annotation:
   shared_preferences:
   equatable:
+  dio:
   introduction_screen:
   flutter_svg:
   intl: any
