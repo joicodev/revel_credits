@@ -1,11 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:revel_credits/src/common/widgets/onboarding_widget.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:revel_credits/src/common/presentation/widgets/onboarding_widget.dart';
+import 'package:revel_credits/src/features/home/presentation/page/home_page.dart';
+import 'package:revel_credits/src/features/user/providers.dart';
 
-class AppInit extends StatelessWidget {
+class AppInit extends ConsumerWidget {
   const AppInit({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return const OnBoardingWidget();
+  Widget build(BuildContext context, WidgetRef ref) {
+    return StreamBuilder(
+      stream: ref.read(userRepositoryProvider).authStatus,
+      builder: (_, AsyncSnapshot snapshot) {
+        print('hasData ===> ${snapshot.hasData}');
+        print('connectionState ===> ${snapshot.connectionState}');
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        }
+
+        if (snapshot.hasData) {
+          print('muestra home page....');
+          return const HomePage();
+        }
+
+        return const OnBoardingWidget();
+      },
+    );
   }
 }

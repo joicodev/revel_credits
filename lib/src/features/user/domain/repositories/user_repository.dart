@@ -3,7 +3,9 @@ import 'package:google_sign_in/google_sign_in.dart';
 
 // The repository is who switches our data source.
 abstract class IUserRepository {
-  Future<UserCredential> signInFirebase();
+  Stream<User?> get authStatus;
+  Future<UserCredential> signIn();
+  Future<GoogleSignInAccount?> logOut();
 /*  User? get currentUser;
   Future<bool> get userIsSigned;
   Stream<User?> get authStatus;

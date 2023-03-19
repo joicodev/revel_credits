@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:revel_credits/src/common/extensions/padding_extensions.dart';
+import 'package:revel_credits/src/common/presentation/extensions/padding_extensions.dart';
 
 class ButtonApp extends StatelessWidget {
   final String buttonText;
@@ -30,7 +30,7 @@ class ButtonApp extends StatelessWidget {
           backgroundColor: theme.primaryColor,
           disabledBackgroundColor: theme.disabledColor,
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Text(buttonText),
       ),
     ).horizontalPadding(horizontalPadding);

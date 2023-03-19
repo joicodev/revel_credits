@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:revel_credits/src/features/home/presentation/page/home_page.dart';
 
 class OnBoardingPage extends StatefulWidget {
   const OnBoardingPage({Key? key}) : super(key: key);
@@ -180,18 +181,6 @@ class OnBoardingPageState extends State<OnBoardingPage> {
           borderRadius: BorderRadius.all(Radius.circular(8.0)),
         ),
       ),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Home')),
-      body: const Center(child: Text("This is the screen after Introduction")),
     );
   }
 }

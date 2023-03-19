@@ -1,16 +1,28 @@
 import 'package:dio/dio.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:revel_credits/src/features/user/infrastructure/data_sources/firebase_auth_api.dart';
 import 'package:revel_credits/src/features/user/infrastructure/data_sources/remote_user_data_source.dart';
-import 'package:revel_credits/src/features/user/domain/repositories/remote_user_datasource_repository.dart';
 import 'package:revel_credits/src/features/user/domain/repositories/user_repository.dart';
 
 class UserRepositoryImpl implements IUserRepository {
   /*final LocalUserDataSource _localUserDataSource = LocalUserDataSource();*/
-  late IRemoteUserRepository _remoteUserDataSource;
+  final _firebaseAuthAPI = FirebaseAuthAPI();
+  final _remoteUserDataSource = RemoteUserDataSourceImpl();
 
   UserRepositoryImpl() {
-    _remoteUserDataSource = RemoteUserDataSourceImpl();
+    print("[UserRepositoryImpl] - initialized🔥🔥");
   }
+
+  @override
+  Stream<User?> get authStatus => _firebaseAuthAPI.authStatus;
+
+  @override
+  Future<UserCredential> signIn() {
+    return _firebaseAuthAPI.signIn();
+  }
+
+  @override
+  logOut() => _firebaseAuthAPI.logOut();
 
   /*@override
   Future<UserEntity> getUser(String userId) async {
@@ -40,10 +52,4 @@ class UserRepositoryImpl implements IUserRepository {
     // TODO: implement saveUser
     throw UnimplementedError();
   }*/
-
-  @override
-  Future<UserCredential> signInFirebase() {
-    // TODO: implement signInFirebase
-    throw UnimplementedError();
-  }
 }

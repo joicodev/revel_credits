@@ -9,5 +9,8 @@
     "onboardingFourthTitle": "Performance and analysis.",
     "letsGoRightAway": "Let's go right away!",
     "skip": "Skip",
-    "done": "Done"
+    "done": "Done",
+    "welcome": "Welcome!",
+    "buttonLoginWithGoogle": "Login whit Google",
+    "buttonLogout": "Logout"
 }

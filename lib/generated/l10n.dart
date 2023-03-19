@@ -159,6 +159,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Welcome!`
+  String get welcome {
+    return Intl.message(
+      'Welcome!',
+      name: 'welcome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login whit Google`
+  String get buttonLoginWithGoogle {
+    return Intl.message(
+      'Login whit Google',
+      name: 'buttonLoginWithGoogle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logout`
+  String get buttonLogout {
+    return Intl.message(
+      'Logout',
+      name: 'buttonLogout',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -22,6 +22,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "buttonLoginWithGoogle":
+            MessageLookupByLibrary.simpleMessage("Ingresar con Google"),
+        "buttonLogout": MessageLookupByLibrary.simpleMessage("Cerrar sesión"),
         "done": MessageLookupByLibrary.simpleMessage("Hecho"),
         "letsGoRightAway":
             MessageLookupByLibrary.simpleMessage("¡Vamos ahora mismo!"),
@@ -41,6 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Haz seguimiento a los estatus de los pagos de tus clientes."),
         "onboardingThirdTitle":
             MessageLookupByLibrary.simpleMessage("Estatus de pagos."),
-        "skip": MessageLookupByLibrary.simpleMessage("Saltar")
+        "skip": MessageLookupByLibrary.simpleMessage("Saltar"),
+        "welcome": MessageLookupByLibrary.simpleMessage("¡Bienvenido!")
       };
 }

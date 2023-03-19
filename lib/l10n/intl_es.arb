@@ -9,5 +9,8 @@
     "onboardingFourthTitle": "Rendimiento y análisis.",
     "letsGoRightAway": "¡Vamos ahora mismo!",
     "skip": "Saltar",
-    "done": "Hecho"
+    "done": "Hecho",
+    "welcome": "¡Bienvenido!",
+    "buttonLoginWithGoogle": "Ingresar con Google",
+    "buttonLogout": "Cerrar sesión"
  }

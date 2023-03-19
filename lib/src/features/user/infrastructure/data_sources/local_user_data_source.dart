@@ -1,22 +1,4 @@
-import 'dart:convert';
-
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:revel_credits/src/features/user/domain/entities/user_entity.dart';
-import 'package:revel_credits/src/features/user/domain/repositories/user_repository.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
-abstract class LocalUserDataSource implements IUserRepository {
-  /*@override
-  Future<UserEntity> getUser(String userId);
-  @override
-  Future<void> saveUser(UserEntity user);
-  @override
-  Future<void> updateUser(UserEntity user);*/
-}
-
-class LocalUserDataSourceImpl implements LocalUserDataSource {
-  static const String key = 'user';
-
+class LocalUserDataSourceImpl {
   //final SharedPreferences sharedPreferences;
 
   LocalUserDataSourceImpl();
@@ -44,9 +26,9 @@ class LocalUserDataSourceImpl implements LocalUserDataSource {
     await saveUser(user);
   }*/
 
-  @override
+  /* @override
   Future<UserCredential> signInFirebase() {
     // TODO: implement signInFirebase
     throw UnimplementedError();
-  }
+  }*/
 }

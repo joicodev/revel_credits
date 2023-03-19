@@ -1,9 +1,8 @@
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:revel_credits/src/features/user/domain/repositories/local_user_datasource_repository.dart';
 import 'package:revel_credits/src/features/user/infrastructure/data_sources/local_user_data_source.dart';
-import 'package:revel_credits/src/features/user/domain/repositories/user_repository.dart';
 
-class LocalUserRepository implements IUserRepository {
-  final LocalUserDataSource _localDataSource = LocalUserDataSourceImpl();
+class LocalUserRepository implements ILocalDSUserRepository {
+  final LocalUserDataSourceImpl _localDataSource = LocalUserDataSourceImpl();
 
   LocalUserRepository();
 
@@ -34,10 +33,4 @@ class LocalUserRepository implements IUserRepository {
       throw Exception('Failed to update user');
     }
   }*/
-
-  @override
-  Future<UserCredential> signInFirebase() {
-    // TODO: implement signInFirebase
-    throw UnimplementedError();
-  }
 }

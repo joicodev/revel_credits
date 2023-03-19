@@ -1,10 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:revel_credits/src/features/user/domain/repositories/local_user_datasource_repository.dart';
 import 'package:revel_credits/src/features/user/infrastructure/data_sources/remote_user_data_source.dart';
 import 'package:revel_credits/src/features/user/domain/repositories/remote_user_datasource_repository.dart';
 import 'package:revel_credits/src/features/user/domain/repositories/user_repository.dart';
 
-class RemoteUserRepository implements IUserRepository {
-  final IRemoteUserRepository remoteDataSource;
+class RemoteUserRepository implements ILocalDSUserRepository {
+  final IRemoteDSUserRepository remoteDataSource;
 
   RemoteUserRepository({required this.remoteDataSource});
 
@@ -27,10 +28,4 @@ class RemoteUserRepository implements IUserRepository {
   Future<void> updateUser(UserEntity user) {
     throw UnimplementedError();
   }*/
-
-  @override
-  Future<UserCredential> signInFirebase() {
-    // TODO: implement signInFirebase
-    throw UnimplementedError();
-  }
 }
