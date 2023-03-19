@@ -1,13 +1,13 @@
-import 'package:revel_credits/src/features/user2/data/data_sources/local_user_data_source.dart';
-import 'package:revel_credits/src/features/user2/domain/entities/user.dart';
-import 'package:revel_credits/src/features/user2/domain/repositories/user_repository.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:revel_credits/src/features/user/infrastructure/data_sources/local_user_data_source.dart';
+import 'package:revel_credits/src/features/user/domain/repositories/user_repository.dart';
 
-class LocalUserRepository implements UserRepository {
-  final LocalUserDataSource localDataSource;
+class LocalUserRepository implements IUserRepository {
+  final LocalUserDataSource _localDataSource = LocalUserDataSourceImpl();
 
-  LocalUserRepository({required this.localDataSource});
+  LocalUserRepository();
 
-  @override
+  /*@override
   Future<UserEntity> getUser(String userId) async {
     try {
       final user = await localDataSource.getUser(userId);
@@ -33,5 +33,11 @@ class LocalUserRepository implements UserRepository {
     } catch (e) {
       throw Exception('Failed to update user');
     }
+  }*/
+
+  @override
+  Future<UserCredential> signInFirebase() {
+    // TODO: implement signInFirebase
+    throw UnimplementedError();
   }
 }

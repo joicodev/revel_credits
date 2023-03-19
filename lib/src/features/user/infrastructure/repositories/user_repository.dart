@@ -1,18 +1,18 @@
-import 'package:revel_credits/src/features/user2/data/data_sources/local_user_data_source.dart';
-import 'package:revel_credits/src/features/user2/data/data_sources/remote_user_data_source.dart';
-import 'package:revel_credits/src/features/user2/domain/entities/user.dart';
-import 'package:revel_credits/src/features/user2/domain/repositories/user_repository.dart';
+import 'package:dio/dio.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:revel_credits/src/features/user/infrastructure/data_sources/remote_user_data_source.dart';
+import 'package:revel_credits/src/features/user/domain/repositories/remote_user_datasource_repository.dart';
+import 'package:revel_credits/src/features/user/domain/repositories/user_repository.dart';
 
-class UserRepositoryImpl implements UserRepository {
-  final LocalUserDataSource localUserDataSource;
-  final RemoteUserDataSource remoteUserDataSource;
+class UserRepositoryImpl implements IUserRepository {
+  /*final LocalUserDataSource _localUserDataSource = LocalUserDataSource();*/
+  late IRemoteUserRepository _remoteUserDataSource;
 
-  UserRepositoryImpl({
-    required this.localUserDataSource,
-    required this.remoteUserDataSource,
-  });
+  UserRepositoryImpl() {
+    _remoteUserDataSource = RemoteUserDataSourceImpl();
+  }
 
-  @override
+  /*@override
   Future<UserEntity> getUser(String userId) async {
     try {
       // Try to get the user from the local data source first
@@ -38,6 +38,12 @@ class UserRepositoryImpl implements UserRepository {
   @override
   Future<void> saveUser(user) {
     // TODO: implement saveUser
+    throw UnimplementedError();
+  }*/
+
+  @override
+  Future<UserCredential> signInFirebase() {
+    // TODO: implement signInFirebase
     throw UnimplementedError();
   }
 }
