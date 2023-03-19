@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:revel_credits/generated/l10n.dart';
 import 'package:revel_credits/src/common/utils/images.dart';
-import 'package:revel_credits/src/features/user/page/auth_page.dart';
+import 'package:revel_credits/src/features/user/presentation/pages/auth_page.dart';
 
 class OnBoardingWidget extends StatefulWidget {
   const OnBoardingWidget({Key? key}) : super(key: key);

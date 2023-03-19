@@ -1,4 +1,4 @@
-import 'package:revel_credits/src/features/user/domain/entities/user.dart';
+import 'package:revel_credits/src/features/user2/domain/entities/user.dart';
 
 abstract class UserRepository {
   Future<UserEntity> getUser(String userId);

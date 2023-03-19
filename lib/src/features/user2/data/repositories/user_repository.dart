@@ -1,7 +1,7 @@
-import 'package:revel_credits/src/features/user/data/data_sources/local_user_data_source.dart';
-import 'package:revel_credits/src/features/user/data/data_sources/remote_user_data_source.dart';
-import 'package:revel_credits/src/features/user/domain/entities/user.dart';
-import 'package:revel_credits/src/features/user/domain/repositories/user_repository.dart';
+import 'package:revel_credits/src/features/user2/data/data_sources/local_user_data_source.dart';
+import 'package:revel_credits/src/features/user2/data/data_sources/remote_user_data_source.dart';
+import 'package:revel_credits/src/features/user2/domain/entities/user.dart';
+import 'package:revel_credits/src/features/user2/domain/repositories/user_repository.dart';
 
 class UserRepositoryImpl implements UserRepository {
   final LocalUserDataSource localUserDataSource;

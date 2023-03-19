@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:revel_credits/src/features/user/data/models/user.dart';
-import 'package:revel_credits/src/features/user/domain/entities/user.dart';
+import 'package:revel_credits/src/features/user2/data/models/user.dart';
+import 'package:revel_credits/src/features/user2/domain/entities/user.dart';
 
 abstract class RemoteUserDataSource {
   Future<UserEntity> getUser(String userId);
