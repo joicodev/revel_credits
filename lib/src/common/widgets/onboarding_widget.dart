@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:revel_credits/generated/l10n.dart';
+import 'package:revel_credits/src/features/user/page/auth_page.dart';
 
 class OnBoardingWidget extends StatefulWidget {
   const OnBoardingWidget({Key? key}) : super(key: key);
@@ -16,7 +17,7 @@ class OnBoardingWidgetState extends State<OnBoardingWidget> {
 
   void _onIntroEnd(context) {
     Navigator.of(context).push(
-      MaterialPageRoute(builder: (_) => const HomePage()),
+      MaterialPageRoute(builder: (_) => const AuthPage()),
     );
   }
 
@@ -36,14 +37,12 @@ class OnBoardingWidgetState extends State<OnBoardingWidget> {
 
   //
   List<PageViewModel> pageViewModel() {
-    const bodyStyle = TextStyle(fontSize: 19.0);
-
     const pageDecoration = PageDecoration(
-      titleTextStyle: TextStyle(fontSize: 28.0, fontWeight: FontWeight.w700),
-      bodyTextStyle: bodyStyle,
-      bodyPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
       pageColor: Colors.white,
       imagePadding: EdgeInsets.zero,
+      bodyTextStyle: TextStyle(fontSize: 19.0),
+      bodyPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
+      titleTextStyle: TextStyle(fontSize: 28.0, fontWeight: FontWeight.w700),
     );
 
     return [
@@ -107,8 +106,8 @@ class OnBoardingWidgetState extends State<OnBoardingWidget> {
             ),
           ),
           globalFooter: SizedBox(
-            width: double.infinity,
             height: 60,
+            width: double.infinity,
             child: ElevatedButton(
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(
@@ -122,10 +121,10 @@ class OnBoardingWidgetState extends State<OnBoardingWidget> {
               onPressed: () => _onIntroEnd(context),
             ),
           ),
-          pages: pageViewModel(),
           skipOrBackFlex: 0,
           nextFlex: 0,
           showBackButton: false,
+          pages: pageViewModel(),
           //rtl: true, // Display as right-to-left
           back: const Icon(Icons.arrow_back),
           showSkipButton: true,

@@ -27,14 +27,25 @@ class RevelCreditsApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.light,
-        textTheme: const TextTheme(
+        /*textTheme: const TextTheme(
           titleSmall: TextStyle(fontSize: 14.0, fontWeight: FontWeight.bold),
-          displayLarge: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-          titleLarge: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
-          bodyMedium: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
-        ),
-        fontFamily: 'Lato',
-        //useMaterial3: true,
+          displayLarge: TextStyle(
+            fontSize: 72.0,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'OpenSans',
+          ),
+          titleLarge: TextStyle(
+            fontSize: 36.0,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'Montserrat',
+          ),
+          bodyMedium: TextStyle(
+            fontSize: 14.0,
+            fontFamily: 'NotoSans',
+          ),
+        ),*/
+        //fontFamily: 'NotoSans',
+        useMaterial3: true,
         primaryColor: AppColors.primary,
         iconTheme: const IconThemeData(color: AppColors.primary),
         /*buttonBarTheme: const ButtonBarThemeData(
