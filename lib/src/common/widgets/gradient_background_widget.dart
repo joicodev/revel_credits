@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:revel_credits/src/common/config/app_colors.dart';
+import 'package:revel_credits/src/common/utils/app_colors.dart';
 
 class GradientBackgroundWidget extends StatelessWidget {
   /// [height] null is FullScreen

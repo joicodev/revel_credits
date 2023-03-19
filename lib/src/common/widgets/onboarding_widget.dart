@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:revel_credits/generated/l10n.dart';
+import 'package:revel_credits/src/common/utils/images.dart';
 import 'package:revel_credits/src/features/user/page/auth_page.dart';
 
 class OnBoardingWidget extends StatefulWidget {
@@ -23,7 +24,7 @@ class OnBoardingWidgetState extends State<OnBoardingWidget> {
 
   Widget _buildFullscreenImage() {
     return SvgPicture.asset(
-      'assets/onboarding/car1.svg',
+      onBoardingCar1,
       fit: BoxFit.cover,
       height: double.infinity,
       width: double.infinity,
@@ -32,7 +33,7 @@ class OnBoardingWidgetState extends State<OnBoardingWidget> {
   }
 
   Widget _buildImage(String assetName, [double width = double.infinity]) {
-    return SvgPicture.asset('assets/onboarding/$assetName', width: width);
+    return SvgPicture.asset(assetName, width: width);
   }
 
   //
@@ -49,19 +50,19 @@ class OnBoardingWidgetState extends State<OnBoardingWidget> {
       PageViewModel(
         title: S.of(context).onboardingFirstTitle,
         body: S.of(context).onboardingFirst,
-        image: _buildImage('car3.svg'),
+        image: _buildImage(onBoardingCar6),
         decoration: pageDecoration,
       ),
       PageViewModel(
         title: S.of(context).onboardingSecondTitle,
         body: S.of(context).onboardingSecond,
-        image: _buildImage('car4.svg'),
+        image: _buildImage(onBoardingCar3),
         decoration: pageDecoration,
       ),
       PageViewModel(
         title: S.of(context).onboardingThirdTitle,
         body: S.of(context).onboardingThird,
-        image: _buildImage('car5.svg'),
+        image: _buildImage(onBoardingCredits),
         decoration: pageDecoration,
       ),
       PageViewModel(
@@ -73,7 +74,7 @@ class OnBoardingWidgetState extends State<OnBoardingWidget> {
           bodyAlignment: Alignment.bottomCenter,
           imageAlignment: Alignment.topCenter,
         ),
-        image: _buildImage('car1.svg'),
+        image: _buildImage(onBoardingAnalytics),
         reverse: true,
       ),
     ];
@@ -154,18 +155,6 @@ class OnBoardingWidgetState extends State<OnBoardingWidget> {
           ),*/
         ),
       ),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Home')),
-      body: const Center(child: Text("This is the screen after Introduction")),
     );
   }
 }

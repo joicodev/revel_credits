@@ -82,11 +82,6 @@ flutter:
     - assets/logo/
     - assets/onboarding/
 
-flutter_intl:
-  enabled: true
-  class_name: S
-  main_locale: en
-
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
@@ -99,24 +94,29 @@ flutter_intl:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+    - family: Fasthand
+      fonts:
+        - asset: assets/fonts/Fasthand-Regular.ttf
+
     - family: OpenSans
       fonts:
-        - asset: fonts/OpenSans-Regular.ttf
-        - asset: fonts/OpenSans-Bold.ttf
-
-    - family: prueba
-      fonts:
-        - asset: fonts/prueba.ttf
+        - asset: assets/fonts/OpenSans-Regular.ttf
+        - asset: assets/fonts/OpenSans-Bold.ttf
 
     - family: Montserrat
       fonts:
-        - asset: fonts/Montserrat-Regular.ttf
-        - asset: fonts/Montserrat-Bold.ttf
+        - asset: assets/fonts/Montserrat-Regular.ttf
+        - asset: assets/fonts/Montserrat-Bold.ttf
 
     - family: NotoSans
       fonts:
-        - asset: fonts/NotoSans-Regular.ttf
-        - asset: fonts/NotoSans-Bold.ttf
+        - asset: assets/fonts/NotoSans-Regular.ttf
+        - asset: assets/fonts/NotoSans-Bold.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+flutter_intl:
+  enabled: true
+  class_name: S
+  main_locale: en

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:revel_credits/src/common/utils/images.dart';
 import 'package:revel_credits/src/common/widgets/base_scaffold.dart';
+import 'package:revel_credits/src/common/widgets/button_app_widget.dart';
 
 class AuthPage extends StatelessWidget {
   const AuthPage({Key? key}) : super(key: key);
@@ -11,22 +13,16 @@ class AuthPage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
+          Text(
             'Welcome',
-            style: TextStyle(
-              fontFamily: 'prueba',
-              fontWeight: FontWeight.bold,
-            ),
+            style: Theme.of(context).textTheme.titleLarge,
           ),
-          const Text(
-            'Welcome',
-            style: TextStyle(fontFamily: 'Montserrat'),
+          Image.asset(logoDark),
+          const ButtonApp(
+            buttonText: 'Login with Gmail',
+            margin: EdgeInsets.only(top: 10),
+            onPressed: null,
           ),
-          const Text(
-            'Welcome',
-            style: TextStyle(fontFamily: 'NotoSans'),
-          ),
-          Image.asset('assets/logo/logo_dark.png'),
         ],
       ),
     );
