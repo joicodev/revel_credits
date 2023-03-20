@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:revel_credits/src/common/presentation/widgets/gradient_background_widget.dart';
+import 'package:revel_credits/src/shared/presentation/widgets/gradient_background_widget.dart';
 
 class BaseScaffold extends StatelessWidget {
   final BackgroundParams? background;

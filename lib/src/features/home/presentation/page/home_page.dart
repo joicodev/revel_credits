@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:revel_credits/generated/l10n.dart';
-import 'package:revel_credits/src/common/presentation/widgets/base_scaffold.dart';
-import 'package:revel_credits/src/common/presentation/widgets/button_app_widget.dart';
+import 'package:revel_credits/src/shared/presentation/widgets/base_scaffold.dart';
+import 'package:revel_credits/src/shared/presentation/widgets/button_app_widget.dart';
 import 'package:revel_credits/src/features/user/providers.dart';
 
 class HomePage extends ConsumerWidget {

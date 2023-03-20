@@ -1,15 +1,15 @@
-import 'package:dio/dio.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:revel_credits/src/features/user/domain/repositories/remote_user_datasource_repository.dart';
 import 'package:revel_credits/src/features/user/infrastructure/data_sources/firebase_auth_api.dart';
-import 'package:revel_credits/src/features/user/infrastructure/data_sources/remote_user_data_source.dart';
 import 'package:revel_credits/src/features/user/domain/repositories/user_repository.dart';
 
 class UserRepositoryImpl implements IUserRepository {
   /*final LocalUserDataSource _localUserDataSource = LocalUserDataSource();*/
-  final _firebaseAuthAPI = FirebaseAuthAPI();
-  final _remoteUserDataSource = RemoteUserDataSourceImpl();
+  final FirebaseAuthAPI _firebaseAuthAPI = FirebaseAuthAPI.instance;
+  late IRemoteDSUserRepository _remoteUserDataSource;
 
-  UserRepositoryImpl() {
+  UserRepositoryImpl(IRemoteDSUserRepository remoteDataSource) {
+    _remoteUserDataSource = remoteDataSource;
     print("[UserRepositoryImpl] - initialized🔥🔥");
   }
 

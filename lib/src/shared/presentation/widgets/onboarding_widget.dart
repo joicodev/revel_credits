@@ -4,8 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:revel_credits/generated/l10n.dart';
-import 'package:revel_credits/src/common/providers/app_providers.dart';
-import 'package:revel_credits/src/common/utils/images.dart';
+import 'package:revel_credits/src/shared/presentation/utils/images.dart';
+import 'package:revel_credits/src/shared/providers/app_providers.dart';
 import 'package:revel_credits/src/features/user/presentation/pages/auth_page.dart';
 
 class OnBoardingWidget extends ConsumerStatefulWidget {
@@ -16,10 +16,11 @@ class OnBoardingWidget extends ConsumerStatefulWidget {
 }
 
 class OnBoardingWidgetState extends ConsumerState<OnBoardingWidget> {
-  final introKey = GlobalKey<IntroductionScreenState>();
+  final _introKey = GlobalKey<IntroductionScreenState>();
 
+  /// Method is executed when the user finishes the intro
   void _onIntroEnd(context) {
-    ref.read(sharedPrefs).isFirstTime = false;
+    ref.read(sharedPrefs).appFirstTime = false;
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(builder: (_) => const AuthPage()),
     );
@@ -92,7 +93,7 @@ class OnBoardingWidgetState extends ConsumerState<OnBoardingWidget> {
       body: SafeArea(
         bottom: false,
         child: IntroductionScreen(
-          key: introKey,
+          key: _introKey,
           globalBackgroundColor: Colors.white,
           allowImplicitScrolling: true,
           autoScrollDuration: 3000,

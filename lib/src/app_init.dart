@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:revel_credits/generated/l10n.dart';
-import 'package:revel_credits/src/common/presentation/widgets/onboarding_widget.dart';
-import 'package:revel_credits/src/common/providers/app_providers.dart';
-import 'package:revel_credits/src/common/utils/app_colors.dart';
+import 'package:revel_credits/src/shared/presentation/utils/app_colors.dart';
+import 'package:revel_credits/src/shared/presentation/widgets/onboarding_widget.dart';
+import 'package:revel_credits/src/shared/providers/app_providers.dart';
 import 'package:revel_credits/src/features/home/presentation/page/home_page.dart';
 import 'package:revel_credits/src/features/user/presentation/pages/auth_page.dart';
 import 'package:revel_credits/src/features/user/providers.dart';
@@ -13,7 +13,7 @@ class AppInit extends ConsumerWidget {
   const AppInit({Key? key}) : super(key: key);
 
   Widget _handleCurrentSession(WidgetRef ref) {
-    if (ref.read(sharedPrefs).isFirstTime) {
+    if (ref.read(sharedPrefs).appFirstTime) {
       return const OnBoardingWidget();
     }
 

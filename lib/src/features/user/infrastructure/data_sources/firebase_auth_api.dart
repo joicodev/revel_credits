@@ -2,12 +2,16 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class FirebaseAuthAPI {
+  static FirebaseAuthAPI? _instance;
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GoogleSignIn _googleSignIn = GoogleSignIn();
 
-  FirebaseAuthAPI() {
+  FirebaseAuthAPI._() {
     print("[FirebaseAuthAPI] - initialized🔥🔥");
   }
+
+  // Unique instance for FirebaseAuthAPI
+  static FirebaseAuthAPI get instance => _instance ??= FirebaseAuthAPI._();
 
   // Getting current user
   //User? get currentUser => _auth.currentUser;

@@ -1,14 +1,11 @@
-import 'package:dio/dio.dart';
-import 'package:revel_credits/src/common/infraestructure/client/dio_client_http.dart';
+import 'package:revel_credits/src/shared/infrastructure/client/dio_client_http.dart';
 import 'package:revel_credits/src/features/user/domain/repositories/remote_user_datasource_repository.dart';
 
-class RemoteUserDataSourceImpl implements IRemoteDSUserRepository {
-  final DioClientHttp _clientHttp = DioClientHttp(
-    baseUrl: '',
-    options: BaseOptions(),
-  );
+class RemoteUserDataSource implements IRemoteDSUserRepository {
+  late DioClientHttp _clientHttp;
 
-  RemoteUserDataSourceImpl() {
+  RemoteUserDataSource(DioClientHttp client) {
+    _clientHttp = client;
     print("[RemoteUserDataSourceImpl] - initialized🔥🔥");
   }
 

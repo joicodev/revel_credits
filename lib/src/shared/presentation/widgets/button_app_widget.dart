@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:revel_credits/src/common/presentation/extensions/padding_extensions.dart';
+import 'package:revel_credits/src/shared/presentation/extensions/padding_extensions.dart';
 
 class ButtonApp extends StatelessWidget {
   final String buttonText;
