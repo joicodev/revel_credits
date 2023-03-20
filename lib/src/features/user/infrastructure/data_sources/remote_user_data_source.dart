@@ -6,7 +6,7 @@ class RemoteUserDataSource implements IRemoteDSUserRepository {
 
   RemoteUserDataSource(DioClientHttp client) {
     _clientHttp = client;
-    print("[RemoteUserDataSourceImpl] - initialized🔥🔥");
+    print("[RemoteUserDataSource] - initialized🔥🔥");
   }
 
   /*@override

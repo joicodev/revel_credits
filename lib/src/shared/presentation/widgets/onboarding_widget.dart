@@ -4,9 +4,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:revel_credits/generated/l10n.dart';
+import 'package:revel_credits/src/app_init.dart';
 import 'package:revel_credits/src/shared/presentation/utils/images.dart';
 import 'package:revel_credits/src/shared/providers/app_providers.dart';
-import 'package:revel_credits/src/features/user/presentation/pages/auth_page.dart';
 
 class OnBoardingWidget extends ConsumerStatefulWidget {
   const OnBoardingWidget({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class OnBoardingWidgetState extends ConsumerState<OnBoardingWidget> {
   void _onIntroEnd(context) {
     ref.read(sharedPrefs).appFirstTime = false;
     Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (_) => const AuthPage()),
+      MaterialPageRoute(builder: (_) => const AppInit()),
     );
   }
 

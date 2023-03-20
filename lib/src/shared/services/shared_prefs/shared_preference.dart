@@ -42,60 +42,67 @@ class SharedPreferencesService implements SharedPreferencesServiceI {
   }
 
   // Save an integer value.
-  void setInt(String key, int value) async {
+  void _setInt(String key, int value) async {
     await _prefs?.setInt(key, value);
   }
 
-  // Save an boolean.
-  void setBool(String key, bool value) async {
-    await _prefs?.setBool(key, value);
-  }
-
-  // Save an double value.
-  void setDouble(String key, double value) async {
-    await _prefs?.setDouble(key, value);
-  }
-
-  // Save an String value.
-  void setString(String key, String value) async {
-    await _prefs?.setString(key, value);
-  }
-
-  // Save an list of strings
-  void setStringList(String key, List<String> value) async {
-    await _prefs?.setStringList(key, value);
-  }
-
   // Get an integer value.
-  int? getInt(String key) {
+  int? _getInt(String key) {
     return _prefs?.getInt(key);
   }
 
+  // Save an boolean.
+  void _setBool(String key, bool value) async {
+    await _prefs?.setBool(key, value);
+  }
+
   // Get an boolean.
-  bool? getBool(String key) {
+  bool? _getBool(String key) {
     return _prefs?.getBool(key);
   }
 
+  // Save an double value.
+  void _setDouble(String key, double value) async {
+    await _prefs?.setDouble(key, value);
+  }
+
   // Get an double value.
-  double? getDouble(String key) {
+  double? _getDouble(String key) {
     return _prefs?.getDouble(key);
   }
 
+  // Save an String value.
+  void _setString(String key, String value) async {
+    await _prefs?.setString(key, value);
+  }
+
   // Get an String value.
-  String? getString(String key) {
+  String? _getString(String key) {
     return _prefs?.getString(key);
   }
 
+  // Save an list of strings
+  void _setStringList(String key, List<String> value) async {
+    await _prefs?.setStringList(key, value);
+  }
+
   // Get an list of strings
-  List<String>? getStringList(String key) {
+  List<String>? _getStringList(String key) {
     return _prefs?.getStringList(key);
   }
 
+  Future<bool> _removeItem(String key) async =>
+      await _prefs?.remove(key) ?? false;
+
   /// Returns true if it's the first time the app is launched, otherwise returns false.
   @override
-  bool get appFirstTime => getBool(_KeyPrefs.firsTimeApp.k) ?? false;
+  bool get appFirstTime => _getBool(_KeyPrefs.firsTimeApp.k) ?? true;
 
   /// Sets whether it's the first time the app is launched.
   @override
-  set appFirstTime(bool value) => setBool(_KeyPrefs.firsTimeApp.k, value);
+  set appFirstTime(bool value) => _setBool(_KeyPrefs.firsTimeApp.k, value);
+
+  /// Sets whether it's the first time the app is launched.
+  @override
+  Future<bool> removeFirstTime() => _removeItem(_KeyPrefs.firsTimeApp.k);
 }

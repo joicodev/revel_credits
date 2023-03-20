@@ -3,4 +3,6 @@ abstract class SharedPreferencesServiceI {
   bool get appFirstTime;
   // Add a boolean, if the user is loading the app for the first time
   set appFirstTime(bool value);
+  // Remove key
+  Future<bool> removeFirstTime();
 }
