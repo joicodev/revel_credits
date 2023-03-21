@@ -24,6 +24,8 @@ class AppInit extends ConsumerWidget {
           return const HomePage();
         }
 
+        //OnBoardingWidget
+
         return const AuthPage();
       },
     );

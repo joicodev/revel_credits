@@ -28,7 +28,7 @@ class _RevelCreditsApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    //ref.read(sharedPrefs).removeFirstTime();
+    ref.read(sharedPrefs).removeFirstTime();
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
@@ -91,6 +91,7 @@ class _RevelCreditsApp extends ConsumerWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: const [Locale('en'), Locale('es')],
+      //home: const AppInit(),
       home: ref.read(sharedPrefs).appFirstTime
           ? const OnBoardingWidget()
           : const AppInit(),
